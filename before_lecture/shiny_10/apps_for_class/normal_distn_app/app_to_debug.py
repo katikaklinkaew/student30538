@@ -1,9 +1,10 @@
 from shiny import App, render, ui
+import numpy as np
 from shinywidgets import render_altair, output_widget
 
 app_ui = ui.page_fluid(
     ui.panel_title("Histogram of 200 Draws from Normal with mean mu"),
-    ui.input_slider("mu", "mean mu", 0, 100, 20)
+    ui.input_slider("mu", "mean mu", 0, 100, 20),
     output_widget("my_hist")
 )
 
